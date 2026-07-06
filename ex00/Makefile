@@ -7,6 +7,8 @@ OBJ_DIR			=	obj
 SRC				= 	src/Animal.cpp		\
 					src/Dog.cpp 		\
 					src/Cat.cpp			\
+					src/WrongAnimal.cpp	\
+					src/WrongCat.cpp	\
 					main.cpp
 INCLUDES		=	include
 CPP				=	c++
