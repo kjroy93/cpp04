@@ -6,7 +6,7 @@
 /*   By: kmarrero <kmarrero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/13 17:33:22 by kmarrero          #+#    #+#             */
-/*   Updated: 2026/07/13 22:22:19 by kmarrero         ###   ########.fr       */
+/*   Updated: 2026/07/14 17:18:37 by kmarrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,16 @@ int	main(void)
 		AMateria*	created_1 = tmp.createMateria("cure");
 		character.equip(created);
 		character.equip(created_1);
+		floor[0] = character.getItem(0);
+		floor[1] = character.getItem(1);
+		character.use(0, ch_t);
 		character.use(1, ch_t);
-		(void)floor;
+		character.unequip(0);
+		character.unequip(1);
 		delete (ice);
 		delete (cure);
-		delete (created);
-		delete (created_1);
+		delete (floor[0]);
+		delete (floor[1]);
 	}
 	return (0);
 }

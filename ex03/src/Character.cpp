@@ -6,7 +6,7 @@
 /*   By: kmarrero <kmarrero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/13 19:53:27 by kmarrero          #+#    #+#             */
-/*   Updated: 2026/07/13 22:14:19 by kmarrero         ###   ########.fr       */
+/*   Updated: 2026/07/14 20:38:01 by kmarrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,15 @@ Character::Character(const std::string& name)
 }
 
 Character::Character(const Character& other)
+	:name_(other.name_)
 {
 	for (int i = 0; i < 4; i++)
-		inventory_[i] = NULL;
+	{
+		if (other.inventory_[i])
+			inventory_[i] = other.inventory_[i]->clone();
+		else
+			inventory_[i] = NULL;
+	}
 	*this = other;
 }
 
@@ -59,6 +65,11 @@ Character::~Character()
 const	std::string&	Character::getName() const
 {
 	return (name_);
+}
+
+AMateria*	Character::getItem(int idx)
+{
+	return (this->inventory_[idx]);
 }
 
 void	Character::equip(AMateria* m)
