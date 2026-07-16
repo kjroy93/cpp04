@@ -6,7 +6,7 @@
 /*   By: kmarrero <kmarrero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/05 21:34:43 by kmarrero          #+#    #+#             */
-/*   Updated: 2026/07/06 20:05:54 by kmarrero         ###   ########.fr       */
+/*   Updated: 2026/07/16 15:54:39 by kmarrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ class	Cat : public Animal
 		Cat();
 		Cat(const std::string& type);
 		Cat(const Cat& other);
-		Cat&				operator=(const Cat& other);
 		~Cat();
+		Cat&				operator=(const Cat& other);
 		void				makeSound(void) const;
 		void				setIdea(int index, const std::string& idea);
 		const std::string&	getIdea(int index) const;

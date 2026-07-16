@@ -6,7 +6,7 @@
 /*   By: kmarrero <kmarrero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/06 18:48:29 by kmarrero          #+#    #+#             */
-/*   Updated: 2026/07/14 20:16:57 by kmarrero         ###   ########.fr       */
+/*   Updated: 2026/07/16 15:49:46 by kmarrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,32 +20,48 @@ int main()
 	Animal*	animal[20];
 
 	for (int i = 0; i < 10; i++)
-	{
 		animal[i] = new Dog();
-	}
 	for (int i = 10; i < 20; i++)
-	{
 		animal[i] = new Cat();
+	{
+		std::cout << "==========Deep Brain Copy==========" << std::endl;
+		Cat	cat0;
+		Cat	cat1 = cat0;
+		cat0.setIdea(0, "Eat");
+		std::cout << "First cat idea: " << cat0.getIdea(0) << std::endl;
+		std::cout << "Second cat idea: " << cat1.getIdea(0) << std::endl;
+		cat1.setIdea(0, "Sleep");
+		std::cout << "First cat idea: " << cat1.getIdea(0) << std::endl;
+		std::cout << "Second cat idea: " << cat0.getIdea(0) << std::endl;
 	}
 	{
-		Cat	basic;
-		Cat	tmp = basic;
-		basic.setIdea(0, "Eat");
-		std::cout << basic.getIdea(0) << std::endl;
-		std::cout << tmp.getIdea(0) << std::endl;
-		tmp.setIdea(0, "Sleep");
-		std::cout << tmp.getIdea(0) << std::endl;
-		std::cout << basic.getIdea(0) << std::endl;
+		std::cout << "==========Types==========" << std::endl;
+		for (int i = 0; i < 20; i++)
+		{
+			if (i >= 0 && i <= 9)
+				std::cout << "Dog type: " << animal[i]->getType() << std::endl;
+			if (i >= 10 && i <= 20)
+				std::cout << "Cat type: " << animal[i]->getType() << std::endl;
+		}
 	}
 	{
-		animal[0]->makeSound();
-		Cat	basic;
-		Cat	tmp = basic;
-		basic.setIdea(0, "Eat");
-		tmp.setIdea(0, "Sleep");
-		std::cout << basic.getIdea(0) << std::endl;
-		std::cout << tmp.getIdea(0) << std::endl;
-		std::cout << animal[0]->getType() << std::endl;
+		std::cout << "==========Sounds==========" << std::endl;
+		for (int i = 0; i < 20; i++)
+		{
+			if (i >= 0 && i <= 9)
+			{
+				std::cout << "Dog sound: ";
+				animal[i]->makeSound();
+				std::cout << std::endl;
+			}
+			if (i >= 10 && i <= 20)
+			{
+				std::cout << "Cat sound: ";
+				animal[i]->makeSound();
+				std::cout << std::endl;
+			}
+		}
+		std::cout << "==========Class Method==========" << std::endl;
 		Dog*	dog1;
 		Cat*	cat1;
 		dog1 = static_cast<Dog*>(animal[0]);

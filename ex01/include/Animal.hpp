@@ -6,7 +6,7 @@
 /*   By: kmarrero <kmarrero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/05 21:10:45 by kmarrero          #+#    #+#             */
-/*   Updated: 2026/07/06 18:30:51 by kmarrero         ###   ########.fr       */
+/*   Updated: 2026/07/16 15:31:32 by kmarrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class	Animal
 		Animal();
 		Animal(const std::string& type_);
 		Animal(const Animal& other);
-		Animal&	operator=(const Animal& other);
-		virtual ~Animal();
+		Animal&			operator=(const Animal& other);
+		virtual 		~Animal();
 		std::string		getType(void) const;
 		virtual void	makeSound(void) const;
 };
