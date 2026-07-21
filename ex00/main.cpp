@@ -6,7 +6,7 @@
 /*   By: kmarrero <kmarrero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/05 22:19:23 by kmarrero          #+#    #+#             */
-/*   Updated: 2026/07/16 17:34:08 by kmarrero         ###   ########.fr       */
+/*   Updated: 2026/07/16 20:31:51 by kmarrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,30 +22,28 @@ int	main(void)
 		const Animal* animal = new Animal();
 		const Animal* dog = new Dog();
 		const Animal* cat = new Cat();
-		std::cout << dog->getType() << " " << std::endl;
-		std::cout << cat->getType() << " " << std::endl;
-		std::cout << "Cats make this sound:" << std::endl;
+		std::cout << "Dog: " << dog->getType() << " " << std::endl;
+		std::cout << "Cat: " << cat->getType() << " " << std::endl;
+		std::cout << "Cats make this sound: ";
 		cat->makeSound();
-		std::cout << "Dogs make this sound:" << std::endl;
+		std::cout << "Dogs make this sound: ";
 		dog->makeSound();
-		std::cout << "Animals sound:" << std::endl;
+		std::cout << "Animals make this sound: ";
 		animal->makeSound();
 		delete (animal);
 		delete (dog);
 		delete (cat);
 	}
-	std::cout << "==========================================" << std::endl;
+	std::cout << "===================Wrong Cat=======================" << std::endl;
 	{
 		const Animal* animal = new Animal();
 		const Animal* dog = new Dog();
 		const WrongAnimal* cat = new WrongCat();
-		std::cout << dog->getType() << " " << std::endl;
-		std::cout << cat->getType() << " " << std::endl;
-		std::cout << "Cats make this sound:" << std::endl;
+		std::cout << "Cats make this sound: ";
 		cat->makeSound();
-		std::cout << "Dogs make this sound:" << std::endl;
+		std::cout << "Dogs make this sound: ";
 		dog->makeSound();
-		std::cout << "Animals sound:" << std::endl;
+		std::cout << "Animals make this sound: ";
 		animal->makeSound();
 		delete (animal);
 		delete (dog);

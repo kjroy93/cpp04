@@ -6,7 +6,7 @@
 /*   By: kmarrero <kmarrero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/06 18:48:29 by kmarrero          #+#    #+#             */
-/*   Updated: 2026/07/16 15:49:46 by kmarrero         ###   ########.fr       */
+/*   Updated: 2026/07/16 20:35:54 by kmarrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,13 +52,11 @@ int main()
 			{
 				std::cout << "Dog sound: ";
 				animal[i]->makeSound();
-				std::cout << std::endl;
 			}
 			if (i >= 10 && i <= 20)
 			{
 				std::cout << "Cat sound: ";
 				animal[i]->makeSound();
-				std::cout << std::endl;
 			}
 		}
 		std::cout << "==========Class Method==========" << std::endl;

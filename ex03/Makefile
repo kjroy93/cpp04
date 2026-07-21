@@ -4,7 +4,7 @@
 
 NAME			=	Character
 OBJ_DIR			=	obj
-SRC				= 	src/AMateria.cpp		\
+SRC				=	src/AMateria.cpp		\
 					src/Character.cpp		\
 					src/Cure.cpp			\
 					src/Ice.cpp				\

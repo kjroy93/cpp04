@@ -6,7 +6,7 @@
 /*   By: kmarrero <kmarrero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/05 22:00:32 by kmarrero          #+#    #+#             */
-/*   Updated: 2026/07/16 15:09:25 by kmarrero         ###   ########.fr       */
+/*   Updated: 2026/07/16 19:28:52 by kmarrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ Cat& Cat::operator=(const Cat& other)
 	if (this != &other)
 	{
 		this->type_ = other.type_;
-		*this->brain_ = other.brain_;
+		*this->brain_ = *other.brain_;
 	}
 	return (*this);
 }

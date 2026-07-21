@@ -4,8 +4,8 @@
 
 NAME			=	Animals
 OBJ_DIR			=	obj
-SRC				= 	src/Animal.cpp		\
-					src/Dog.cpp 		\
+SRC				=	src/Animal.cpp		\
+					src/Dog.cpp			\
 					src/Cat.cpp			\
 					src/WrongAnimal.cpp	\
 					src/WrongCat.cpp	\
